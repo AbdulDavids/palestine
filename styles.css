@@ -1,0 +1,139 @@
+:root {
+    --background-color: #212121;
+    --text-color: #fff;
+
+    --heading-font-size: 24px;
+    --heading-margin-bottom: 20px;
+
+    --inactive-button-color: #555;
+    --button1-active-color: #EE2A35;
+    --button2-active-color: #009736;
+    --button3-active-color: #000000;
+    --circle-color: rgb(255, 255, 255);
+    --button-border: 1px solid #444;
+    --button-border-radius: 20px;
+    --button-height: 24px;
+    --button-width: 48px;
+    --button-margin-right: 10px;
+
+    --circle-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+
+.heading {
+    font-size: var(--heading-font-size);
+    margin-bottom: var(--heading-margin-bottom);
+    margin-top: 30vh;
+
+}
+
+.button-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.toggle-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    border: var(--button-border);
+    border-radius: var(--button-border-radius);
+    outline: none;
+    cursor: pointer;
+    height: var(--button-height);
+    width: var(--button-width);
+    margin-right: var(--button-margin-right);
+    transition: background-color 0.3s;
+}
+
+.toggle-button:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--circle-color);
+    box-shadow: var(--circle-shadow);
+    transition: transform 0.3s;
+}
+
+#button1-container,
+#button2-container,
+#button3-container {
+    text-align: right;
+}
+
+#button1 {
+    background-color: var(--inactive-button-color);
+}
+
+#button1.active {
+    background-color: var(--button1-active-color);
+}
+
+#button1.active:before {
+    background-color: var(--circle-color);
+}
+
+#button2 {
+    background-color: var(--inactive-button-color);
+}
+
+#button2.active {
+    background-color: var(--button2-active-color);
+}
+
+#button2.active:before {
+    background-color: var(--circle-color);
+}
+
+#button3 {
+    background-color: var(--inactive-button-color);
+}
+
+#button3.active {
+    background-color: var(--button3-active-color);
+}
+
+#button3.active:before {
+    background-color: var(--circle-color);
+}
+
+.toggle-button.active {
+    background-color: #4CAF50;
+}
+
+.toggle-button.active:before {
+    transform: translateX(24px);
+}
+
+.footer {
+    margin-top: auto; /* Push the footer to the bottom of the page */
+    padding: 10px;
+    background-color: #222; /* Dark background color for the footer */
+    color: #ffffff77; /* Light text color for the footer */
+    text-align: center;
+}
