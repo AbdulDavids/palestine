@@ -57,6 +57,7 @@ body {
     position: relative;
     appearance: none;
     -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
     border: var(--button-border);
     border-radius: var(--button-border-radius);
     outline: none;
