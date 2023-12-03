@@ -131,9 +131,10 @@ body {
 }
 
 .footer {
-    margin-top: auto; /* Push the footer to the bottom of the page */
+    margin-top: auto;
     padding: 10px;
-    background-color: #222; /* Dark background color for the footer */
-    color: #ffffff77; /* Light text color for the footer */
+    background-color: #222; 
+    color: #ffffff4f; 
     text-align: center;
 }
+
